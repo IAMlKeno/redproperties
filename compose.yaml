@@ -11,6 +11,7 @@ services:
       - ./drupal/custom/modules:/opt/drupal/web/modules/custom
       - ./drupal/custom/themes:/opt/drupal/web/themes/custom
       - ./drupal/config:/opt/drupal/config
+      - ./drupal/composer:/tmp/composer
 
   db:
     image: arm64v8/mysql
