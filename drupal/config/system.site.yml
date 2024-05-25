@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 0718056c-0acb-46c1-b0f5-e4a977afade3
+name: 'Red Properties'
+mail: redproperties@email.com
+slogan: 'Local housing needs met locally'
+page:
+  403: ''
+  404: ''
+  front: /property-listings
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

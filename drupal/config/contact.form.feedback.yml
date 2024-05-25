@@ -1,0 +1,14 @@
+uuid: 077204ad-103f-4e57-b06d-003f529c4684
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - redproperties@email.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''
