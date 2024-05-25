@@ -1,0 +1,27 @@
+services:
+  drupal:
+    container_name: redproperties_cms
+    build:
+      context: ./drupal
+      dockerfile: cms.Dockerfile
+    ports:
+      - 8085:80
+    volumes:
+      - ./drupal/files:/opt/drupal/web/sites/default/files
+      - ./drupal/custom/modules:/opt/drupal/web/modules/custom
+      - ./drupal/custom/themes:/opt/drupal/web/themes/custom
+      - ./drupal/config:/opt/drupal/config
+
+  db:
+    image: arm64v8/mysql
+    container_name: redproperties_db
+    environment:
+      MYSQL_DATABASE: 'redproperties'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    restart: always
+    expose:
+      - 3306
+    volumes:
+      - ./data/database/data:/var/lib/mysql

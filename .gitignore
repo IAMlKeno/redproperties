@@ -59,4 +59,7 @@
 /drush.phar
 /drush
 /drupal.phar
-/drupal
+# /drupal
+
+/drupal/files
+/data/database/data
