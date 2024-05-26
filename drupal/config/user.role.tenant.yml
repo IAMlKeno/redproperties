@@ -1,0 +1,9 @@
+uuid: 040269e7-fc23-445c-aa89-cd9f468668b1
+langcode: en
+status: true
+dependencies: {  }
+id: tenant
+label: Tenant
+weight: 4
+is_admin: null
+permissions: {  }

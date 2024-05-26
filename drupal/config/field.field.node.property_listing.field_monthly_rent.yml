@@ -1,0 +1,23 @@
+uuid: 413c1365-5add-4a47-98d4-ae9b9c0ac23c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_monthly_rent
+    - node.type.property_listing
+id: node.property_listing.field_monthly_rent
+field_name: field_monthly_rent
+entity_type: node
+bundle: property_listing
+label: 'Monthly Rent'
+description: 'Monthly Cost'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

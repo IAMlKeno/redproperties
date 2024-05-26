@@ -15,8 +15,12 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  devel: 0
+  devel_kint_extras: 0
+  devel_php: 0
   dynamic_page_cache: 0
   editor: 0
+  entity: 0
   field: 0
   field_ui: 0
   file: 0
@@ -33,6 +37,8 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  profile: 0
+  red_properties: 0
   search: 0
   shortcut: 0
   system: 0
@@ -43,6 +49,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  webform: 0
   pathauto: 1
   views: 10
   standard: 1000

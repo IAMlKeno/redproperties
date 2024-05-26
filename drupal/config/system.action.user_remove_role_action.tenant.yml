@@ -1,0 +1,14 @@
+uuid: a19e166c-4e56-4b91-b604-650c7ef3f8f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tenant
+  module:
+    - user
+id: user_remove_role_action.tenant
+label: 'Remove the Tenant role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: tenant

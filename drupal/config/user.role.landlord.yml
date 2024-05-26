@@ -1,0 +1,15 @@
+uuid: 9c938d93-90e1-4230-be2d-8acc053dd1ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.property_listing
+  module:
+    - node
+id: landlord
+label: Landlord
+weight: 5
+is_admin: null
+permissions:
+  - 'create property_listing content'
+  - 'edit own property_listing content'

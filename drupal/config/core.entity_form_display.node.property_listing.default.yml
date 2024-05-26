@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.property_listing.body
     - field.field.node.property_listing.field_lead_image
     - field.field.node.property_listing.field_location
+    - field.field.node.property_listing.field_monthly_rent
     - image.style.thumbnail
     - node.type.property_listing
   module:
@@ -47,6 +48,13 @@ content:
     region: content
     settings:
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_monthly_rent:
+    type: number
+    weight: 26
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   path:

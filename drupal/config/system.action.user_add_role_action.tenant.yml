@@ -1,0 +1,14 @@
+uuid: e4cf8f28-b74c-4e6a-b34f-47b6982c9352
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tenant
+  module:
+    - user
+id: user_add_role_action.tenant
+label: 'Add the Tenant role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: tenant

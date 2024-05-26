@@ -1,0 +1,14 @@
+uuid: 26930328-ff50-4d34-8667-949d9d02b3b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.landlord
+  module:
+    - user
+id: user_remove_role_action.landlord
+label: 'Remove the Landlord role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: landlord
