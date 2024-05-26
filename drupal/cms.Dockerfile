@@ -1,6 +1,6 @@
 FROM --platform=arm64 drupal:10-php8.3
 
-
+COPY ./settings.php /opt/drupal/web/sites/default
 COPY ./settings.local.php /opt/drupal/web/sites/default
 COPY ./entrypoint.sh /usr/local/bin/
 
