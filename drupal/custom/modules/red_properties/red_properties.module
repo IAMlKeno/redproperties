@@ -7,6 +7,8 @@ use Drupal\Core\Form\FormStateInterface;
  * Primary module hooks for Red Properties module.
  */
 
+define('ROLES_ALLOWED_TO_LIST_PROPERTIES', ['tenant', 'administrator']);
+
 /**
  * Implements hook_form_FORM_ID_alter().
  */
@@ -47,4 +49,19 @@ function red_properties_register_submit(&$form, FormStateInterface &$form_state)
   $user = \Drupal\user\Entity\User::load($uid);
   $user->addRole($role);
   $user->save();
+  // TODO: get this to redirect?
+}
+
+/**
+ * Implements hook_preprocess_hook() main--menu.
+ */
+function red_properties_preprocess_menu__main(&$variables) {
+  $pattern = "property_listing";
+  foreach ($variables['items'] as $idx => $item) {
+    if (stripos($item['url']->toString(), $pattern) !== FALSE) {
+      if (empty(array_intersect(ROLES_ALLOWED_TO_LIST_PROPERTIES, \Drupal::currentUser()->getRoles()))) {
+        unset($variables['items'][$idx]);
+      }
+    }
+  }
 }
