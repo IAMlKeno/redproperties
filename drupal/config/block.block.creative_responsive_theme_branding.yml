@@ -1,15 +1,15 @@
-uuid: abcf493f-02c6-4ae4-9a13-404d8cb0df10
+uuid: c60ae77b-c8b8-418a-8ab0-1de5a8f71631
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - olivero
+    - creative_responsive_theme
 _core:
-  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
-id: olivero_site_branding
-theme: olivero
+  default_config_hash: UOc1JR94blJQjul9ylyOuWm21IjfhByUwiVMsEOOhC4
+id: creative_responsive_theme_branding
+theme: creative_responsive_theme
 region: header
 weight: 0
 provider: null

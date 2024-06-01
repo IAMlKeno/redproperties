@@ -1,4 +1,4 @@
-uuid: 6b2dcd42-c11e-465f-961a-bb6d1f103f60
+uuid: 1c0850ce-f3cf-4b8f-ba79-3596b7b0c267
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - olivero
+    - creative_responsive_theme
 _core:
-  default_config_hash: gmxYWWHmgbe0Pnv8y48ZLSLH5mEHejOjAP6RLxUfdzU
-id: olivero_account_menu
-theme: olivero
-region: secondary_menu
-weight: -4
+  default_config_hash: 7TfIJlAyvTNC9JopTrJSmj1zXsgJHkd8r-wpLlvEBGA
+id: creative_responsive_theme_account_menu
+theme: creative_responsive_theme
+region: auto_hidden_block
+weight: 11
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -22,6 +22,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 1
+  depth: 2
   expand_all_items: false
 visibility: {  }

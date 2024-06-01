@@ -1,0 +1,23 @@
+uuid: 52c0952f-a6cb-4dc3-aadb-e1a95a037c32
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - creative_responsive_theme
+_core:
+  default_config_hash: 6VPZeNjJiEy4dV2KvMyCGQ6xB9Ixez_OLqv415VAvmI
+id: creative_responsive_theme_search
+theme: creative_responsive_theme
+region: footer_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: visible
+  provider: search
+  page_id: ''
+visibility: {  }

@@ -1,17 +1,17 @@
-uuid: 9ccd70a2-2810-467e-a0a1-06034febfeb8
+uuid: ad32427c-c7d6-4309-8800-3182149013ce
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - olivero
+    - creative_responsive_theme
 _core:
-  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
-id: olivero_messages
-theme: olivero
+  default_config_hash: uWy58nYjWIMwjBpWG3bpQw4-czZknk6co5KbdGN8dxA
+id: creative_responsive_theme_messages
+theme: creative_responsive_theme
 region: highlighted
-weight: -5
+weight: -50
 provider: null
 plugin: system_messages_block
 settings:
