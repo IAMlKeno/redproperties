@@ -1,0 +1,6 @@
+red_properties.myprofile:
+  path: '/myprofile'
+  defaults:
+    _title: 'My profile'
+  requirements:
+    _access: 'TRUE'
