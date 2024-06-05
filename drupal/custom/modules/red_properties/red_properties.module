@@ -7,7 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Primary module hooks for Red Properties module.
  */
 
-define('ROLES_ALLOWED_TO_LIST_PROPERTIES', ['tenant', 'administrator']);
+define('ROLES_ALLOWED_TO_LIST_PROPERTIES', ['landlord', 'administrator']);
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -35,7 +35,7 @@ function _get_customer_roles(): array {
 /**
  * Get label from role object
  */
-function _get_role_label(&$role): string {
+function _get_role_label($role): string {
   return $role->label();
 }
 
@@ -50,6 +50,10 @@ function red_properties_register_submit(&$form, FormStateInterface &$form_state)
   $user->addRole($role);
   $user->save();
   // TODO: get this to redirect?
+  if ($role == 'tenant') {
+    $url = Drupal\Core\Url::fromRoute('red_properties.myprofile');
+    $form_state->setRedirectUrl($url);
+  }
 }
 
 /**
