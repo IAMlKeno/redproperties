@@ -4,3 +4,9 @@ red_properties.myprofile:
     _title: 'My profile'
   requirements:
     _access: 'TRUE'
+red_properties.landlordprofile:
+  path: '/landlordprofile'
+  defaults:
+    _title: 'Landlord profile'
+  requirements:
+    _access: 'TRUE'

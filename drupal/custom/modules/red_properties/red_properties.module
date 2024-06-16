@@ -34,6 +34,12 @@ function _get_customer_roles(): array {
 
 /**
  * Get label from role object
+ *
+ * @param Drupal\user\Entity\Role $role
+ *   Role entity.
+ *
+ * @return string
+ *   Role label.
  */
 function _get_role_label($role): string {
   return $role->label();
@@ -49,10 +55,16 @@ function red_properties_register_submit(&$form, FormStateInterface &$form_state)
   $user = \Drupal\user\Entity\User::load($uid);
   $user->addRole($role);
   $user->save();
-  // TODO: get this to redirect?
-  if ($role == 'tenant') {
-    $url = Drupal\Core\Url::fromRoute('red_properties.myprofile');
-    $form_state->setRedirectUrl($url);
+
+  switch ($role) {
+    case 'tenant':
+      $url = Drupal\Core\Url::fromRoute('red_properties.myprofile');
+      $form_state->setRedirectUrl($url);
+      break;
+    case 'landlord':
+      $url = Drupal\Core\Url::fromRoute('red_properties.landlordprofile');
+      $form_state->setRedirectUrl($url);
+      break;
   }
 }
 
@@ -64,6 +76,11 @@ function red_properties_preprocess_menu__main(&$variables) {
   foreach ($variables['items'] as $idx => $item) {
     if (stripos($item['url']->toString(), $pattern) !== FALSE) {
       if (empty(array_intersect(ROLES_ALLOWED_TO_LIST_PROPERTIES, \Drupal::currentUser()->getRoles()))) {
+        unset($variables['items'][$idx]);
+      }
+    }
+    if (stripos($item['url']->toString(), 'user/register') !== FALSE) {
+      if (!in_array('anonymous', \Drupal::currentUser()->getRoles())) {
         unset($variables['items'][$idx]);
       }
     }
