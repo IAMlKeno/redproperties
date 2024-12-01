@@ -1,0 +1,12 @@
+name: Red Theme
+type: theme
+description: 'A place for custom theme alterations.'
+core_version_requirement: '>=9.2'
+libraries:
+  - red_theme/global-styling
+base theme: false
+# regions:
+#   header: 'Header'
+#   content: 'Content'
+#   sidebar_first: 'Sidebar first'
+#   footer: 'Footer'

@@ -1,0 +1,7 @@
+<?php
+
+/**
+ * Implements hook_preprocess_hook() main--menu.
+ */
+function red_theme_preprocess_menu__main(&$variables) {
+}
